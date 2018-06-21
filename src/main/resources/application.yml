@@ -1,0 +1,54 @@
+spring:
+  application:
+    name: scheduel
+    cnName: 调度
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/schedule?autoReconnect=true&useCompression=true&useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true
+    username: asap
+    password: asap098
+    driverClassName: com.mysql.jdbc.Driver
+  thymeleaf:
+    prefix: classpath:/templates/
+    suffix: .html
+
+server:
+  port: 8888
+  context-path: /
+
+mybatis:
+  mapperLocations: classpath*:/mapping/*.xml
+  configuration-properties:
+      prefix: CNPC_
+
+swagger:
+  enabled: true
+  title: SCHEDULE-API
+  description: API文档
+  base-package:  com.cnpc.schedule.controller
+  base-path: /
+  exclude-path: /error
+  version: 1.0.0
+
+
+
+connect:
+  proxySwitch: true
+  proxyIp: 10.22.98.21
+  proxyPort: 8080
+
+weapons:
+  url: https://buff.163.com/api/market/goods?game=pubg&page_num=1&category_group=weapons&sort_by=price.desc&_=1524708861640,https://buff.163.com/api/market/goods?game=pubg&page_num=2&category_group=weapons&sort_by=price.desc&_=1524708861643,https://buff.163.com/api/market/goods?game=pubg&page_num=3&category_group=weapons&sort_by=price.desc&_=1524708861645
+
+result:
+  output: /home/jason/Desktop/rich/rich-
+
+gifts:
+  input: /home/jason/Desktop/rich/gift-EQUINOX.json
+
+security:
+  basic:
+    enabled: true
+  user:
+    name: admin
+    password: admin123

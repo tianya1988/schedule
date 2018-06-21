@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.cnpc.schedule.mapper.NodeMapper">
+    <resultMap id="BaseResultMap" type="com.cnpc.schedule.entity.Node">
+        <id column="NODE_ID" property="nodeId" jdbcType="VARCHAR"/>
+        <result column="NODE_NAME" property="nodeName" jdbcType="VARCHAR"/>
+        <result column="NODE_TYPE" property="nodeType" jdbcType="TINYINT"/>
+        <result column="PARENT_ID" property="parentId" jdbcType="VARCHAR"/>
+        <result column="CREATE_TIME" property="createTime" jdbcType="DATE"/>
+        <result column="UPDATE_TIME" property="updateTime" jdbcType="DATE"/>
+    </resultMap>
+
+</mapper>
